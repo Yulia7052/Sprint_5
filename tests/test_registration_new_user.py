@@ -1,28 +1,27 @@
-from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.common.by import By
 import consts
+import user_generator as generator
 
 def test_registration_new_user(driver):
-    driver.get(consts.site_url)
+    driver.get(consts.SITE_URL)
 
-    WebDriverWait(driver, 3).until(expected_conditions.element_to_be_clickable((By.XPATH, consts.header_profile_button)))
-    driver.find_element(By.XPATH, consts.header_profile_button).click()
-    WebDriverWait(driver, 3).until(expected_conditions.element_to_be_clickable((By.XPATH, consts.login_registration_button)))
-    driver.find_element(By.XPATH, consts.login_registration_button).click()
+    WebDriverWait(driver, 3).until(expected_conditions.element_to_be_clickable((By.XPATH, consts.HEADER_PROFILE_BUTTON)))
+    driver.find_element(By.XPATH, consts.HEADER_PROFILE_BUTTON).click()
+    WebDriverWait(driver, 3).until(expected_conditions.element_to_be_clickable((By.XPATH, consts.LOGIN_REGISTRATION_BUTTON)))
+    driver.find_element(By.XPATH, consts.LOGIN_REGISTRATION_BUTTON).click()
 
-    name = 'Персик Яблочный'
-    email = 'ulia_manaenkova_10_025@ya.ru'
-    password = '653412'
-    WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located((By.XPATH, consts.registration_name_field)))
-    driver.find_element(By.XPATH, consts.registration_name_field).send_keys(name)
-    driver.find_element(By.XPATH, consts.registration_email_field).send_keys(email)
-    driver.find_element(By.XPATH, consts.registration_pass_field).send_keys(password)
-    driver.find_element(By.XPATH, consts.registration_submit_button).click()
+    WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located((By.NAME, consts.PASS_FIELD_NAME)))
+    
+    inputs = driver.find_elements(By.NAME, consts.REGISTRATION_FIELDS_NAME)
 
-    WebDriverWait(driver, 3).until(expected_conditions.url_to_be('https://stellarburgers.nomoreparties.site/login'))
-    assert driver.current_url == 'https://stellarburgers.nomoreparties.site/login'
-    driver.quit()
+    inputs[consts.NAME_INPUT_INDEX].send_keys(consts.NEW_USER_NAME)
+    inputs[consts.EMAIL_INPUT_INDEX].send_keys(generator.generate_email())
+    driver.find_element(By.NAME, consts.PASS_FIELD_NAME).send_keys(consts.MAIN_USER_PASS)
+    driver.find_element(By.XPATH, consts.REGISTRATION_SUBMIT_BUTTON).click()
+
+    WebDriverWait(driver, 3).until(expected_conditions.url_to_be(consts.SITE_LOGIN_URL))
+    assert driver.current_url == consts.SITE_LOGIN_URL
 
 

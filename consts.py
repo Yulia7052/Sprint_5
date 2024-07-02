@@ -1,26 +1,36 @@
-site_url = 'https://stellarburgers.nomoreparties.site/'
+SITE_URL = 'https://stellarburgers.nomoreparties.site/'
+SITE_PROFILE_URL = 'https://stellarburgers.nomoreparties.site/account/profile'
+SITE_LOGIN_URL = 'https://stellarburgers.nomoreparties.site/login'
+SITE_ACCOUNT_URL = 'https://stellarburgers.nomoreparties.site/account'
 
-header_profile_button = '//*[@id="root"]/div/header/nav/a'
-login_registration_button = '//*[@id="root"]/div/main/div/div/p[1]/a'
-enter_button = '//*[@id="root"]/div/main/div/div/p/a'
-registration_submit_button = '//*[@id="root"]/div/main/div/form/button'
-login_enter_button = '//*[@id="root"]/div/main/div/form/button'
-constructor_account_enter_button = '//*[@id="root"]/div/main/section[2]/div/button'
-constructor_reserve_button = '//*[@id="root"]/div/main/section[2]/div/button'
-login_recovery_password_button = '//*[@id="root"]/div/main/div/div/p[2]/a'
-account_recovery_exit_button = '//*[@id="root"]/div/main/div/nav/ul/li[3]/button'
-constructor_enter_button = '//*[@id="root"]/div/header/nav/ul/li[1]/a'
+HEADER_PROFILE_BUTTON = '//*[@id="root"]/div/header/nav/a'
+LOGIN_REGISTRATION_BUTTON = '//*[@id="root"]/div/main/div/div/p[1]/a'
+LOGIN_BUTTON = '//*[@id="root"]/div/main/div/div/p/a'
+REGISTRATION_SUBMIT_BUTTON = '//*[@id="root"]/div/main/div/form/button'
+LOGIN_ENTER_BUTTON = '//*[@id="root"]/div/main/div/form/button'
+CONSTRUCTOR_ACCOUNT_LOGIN_BUTTON = '//*[@id="root"]/div/main/section[2]/div/button'
+CONSTRUCTOR_RESERVE_BUTTON = '//*[@id="root"]/div/main/section[2]/div/button'
+LOGIN_RECOVERY_PASSWORD_BUTTON = '//*[@id="root"]/div/main/div/div/p[2]/a'
+ACCOUNT_LOGOUT_BUTTON = '//*[@id="root"]/div/main/div/nav/ul/li[3]/button'
+CONSTRUCTOR_LOGIN_BUTTON = '//*[@id="root"]/div/header/nav/ul/li[1]/a'
 
-registration_name_field = '//*[@id="root"]/div/main/div/form/fieldset[1]/div/div/input'
-registration_email_field = '//*[@id="root"]/div/main/div/form/fieldset[2]/div/div/input'
-registration_pass_field = '//*[@id="root"]/div/main/div/form/fieldset[3]/div/div/input'
-login_email_field = '//*[@id="root"]/div/main/div/form/fieldset[1]/div/div/input'
-login_pass_field = '//*[@id="root"]/div/main/div/form/fieldset[2]/div/div/input'
+REGISTRATION_FIELDS_NAME = 'name'
+LOGIN_EMAIL_FIELD_NAME = 'name'
+PASS_FIELD_NAME = 'Пароль'
 
-registration_pass_div = '//*[@id="root"]/div/main/div/form/fieldset[3]/div/div'
-constructor_sauces_div = '//*[@id="root"]/div/main/section[1]/div[1]/div[2]'
-constructor_bun_div = '//*[@id="root"]/div/main/section[1]/div[1]/div[1]'
-constructor_filling_div = '//*[@id="root"]/div/main/section[1]/div[1]/div[3]'
+REGISTRATION_PASS_ERROR_CLASS = 'input_status_error'
+BURGER_DIVS_CLASS = 'tab_tab__1SPyG'
 
-site_logo = '//*[@id="root"]/div/header/nav/div/a'
+SITE_LOGO = '//*[@id="root"]/div/header/nav/div/a'
 
+MAIN_USER_EMAIL = 'ulia_manaenkova_10_088@google.com'
+MAIN_USER_PASS = '123456'
+NEW_USER_NAME = 'Персик Яблочный' 
+INCORRECT_PASS = '123'
+
+BUN_DIV_INDEX = 0
+SAUCES_DIV_INDEX = 1
+FILLING_DIV_INDEX = 2
+
+NAME_INPUT_INDEX = 0
+EMAIL_INPUT_INDEX = 1

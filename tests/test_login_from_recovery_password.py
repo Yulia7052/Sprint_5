@@ -6,14 +6,14 @@ import consts
 def test_login_from_recovery_password(driver):
     driver.get(consts.SITE_URL)
 
-    WebDriverWait(driver, 3).until(expected_conditions.element_to_be_clickable((By.XPATH, consts.CONSTRUCTOR_ACCOUNT_LOGIN_BUTTON)))
-    driver.find_element(By.XPATH, consts.CONSTRUCTOR_ACCOUNT_LOGIN_BUTTON).click()
+    WebDriverWait(driver, 3).until(expected_conditions.element_to_be_clickable((By.XPATH, consts.CONSTRUCTOR_LOGIN_BUTTON)))
+    driver.find_element(By.XPATH, consts.CONSTRUCTOR_LOGIN_BUTTON).click()
 
     WebDriverWait(driver, 3).until(expected_conditions.element_to_be_clickable((By.XPATH, consts.LOGIN_RECOVERY_PASSWORD_BUTTON)))
     driver.find_element(By.XPATH, consts.LOGIN_RECOVERY_PASSWORD_BUTTON).click()
 
-    WebDriverWait(driver, 3).until(expected_conditions.element_to_be_clickable((By.XPATH, consts.LOGIN_BUTTON)))
-    driver.find_element(By.XPATH, consts.LOGIN_BUTTON).click()
+    WebDriverWait(driver, 3).until(expected_conditions.element_to_be_clickable((By.XPATH, consts.RECOVERY_PASSWORD_LOGIN_BUTTON)))
+    driver.find_element(By.XPATH, consts.RECOVERY_PASSWORD_LOGIN_BUTTON).click()
 
     WebDriverWait(driver, 3).until(expected_conditions.visibility_of_element_located((By.NAME, consts.LOGIN_EMAIL_FIELD_NAME)))
     driver.find_element(By.NAME, consts.LOGIN_EMAIL_FIELD_NAME).send_keys(consts.MAIN_USER_EMAIL)

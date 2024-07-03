@@ -6,7 +6,7 @@ import consts
 def test_constructor_open_filling_tab(driver):
     driver.get(consts.SITE_URL)
 
-    burger_divs = driver.find_elements(By.CLASS_NAME, consts.BURGER_DIVS_CLASS)       
+    burger_divs = driver.find_elements(By.XPATH, consts.BURGER_DIVS_CLASS_XPATH)       
 
     WebDriverWait(driver, 3).until(expected_conditions.element_to_be_clickable(burger_divs[consts.FILLING_DIV_INDEX]))
     burger_divs[consts.FILLING_DIV_INDEX].click()

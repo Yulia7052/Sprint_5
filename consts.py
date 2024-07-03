@@ -3,23 +3,24 @@ SITE_PROFILE_URL = 'https://stellarburgers.nomoreparties.site/account/profile'
 SITE_LOGIN_URL = 'https://stellarburgers.nomoreparties.site/login'
 SITE_ACCOUNT_URL = 'https://stellarburgers.nomoreparties.site/account'
 
-HEADER_PROFILE_BUTTON = '//*[@id="root"]/div/header/nav/a'
-LOGIN_REGISTRATION_BUTTON = '//*[@id="root"]/div/main/div/div/p[1]/a'
-LOGIN_BUTTON = '//*[@id="root"]/div/main/div/div/p/a'
-REGISTRATION_SUBMIT_BUTTON = '//*[@id="root"]/div/main/div/form/button'
-LOGIN_ENTER_BUTTON = '//*[@id="root"]/div/main/div/form/button'
-CONSTRUCTOR_ACCOUNT_LOGIN_BUTTON = '//*[@id="root"]/div/main/section[2]/div/button'
-CONSTRUCTOR_RESERVE_BUTTON = '//*[@id="root"]/div/main/section[2]/div/button'
-LOGIN_RECOVERY_PASSWORD_BUTTON = '//*[@id="root"]/div/main/div/div/p[2]/a'
-ACCOUNT_LOGOUT_BUTTON = '//*[@id="root"]/div/main/div/nav/ul/li[3]/button'
-CONSTRUCTOR_LOGIN_BUTTON = '//*[@id="root"]/div/header/nav/ul/li[1]/a'
+HEADER_PROFILE_BUTTON = '//a[@href="/account"]'
+LOGIN_REGISTRATION_BUTTON = '//a[@href="/register"]'
+RECOVERY_PASSWORD_LOGIN_BUTTON = '//a[@href="/login"]'
+CONSTRUCTOR_BUTTON = '//a[@href="/"]'
+LOGIN_RECOVERY_PASSWORD_BUTTON = '//a[@href="/forgot-password"]'
 
-REGISTRATION_FIELDS_NAME = 'name'
+REGISTRATION_SUBMIT_BUTTON = '//button[contains(text(), "Зарегистрироваться")]'
+LOGIN_ENTER_BUTTON = '//button[contains(text(), "Войти")]'
+CONSTRUCTOR_LOGIN_BUTTON = '//button[contains(text(), "Войти в аккаунт")]'
+ACCOUNT_LOGOUT_BUTTON = '//button[contains(text(), "Выход")]'
+
+BURGER_DIVS_CLASS_XPATH = '//div[contains(@class, "tab_tab")]'
+
+REGISTRATION_FIELDS_NAME = 'name' 
 LOGIN_EMAIL_FIELD_NAME = 'name'
 PASS_FIELD_NAME = 'Пароль'
 
 REGISTRATION_PASS_ERROR_CLASS = 'input_status_error'
-BURGER_DIVS_CLASS = 'tab_tab__1SPyG'
 
 SITE_LOGO = '//*[@id="root"]/div/header/nav/div/a'
 

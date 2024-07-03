@@ -6,14 +6,14 @@ import consts
 def test_login_from_registration_button(driver):
     driver.get(consts.SITE_URL)
 
-    WebDriverWait(driver, 3).until(expected_conditions.element_to_be_clickable((By.XPATH, consts.CONSTRUCTOR_ACCOUNT_LOGIN_BUTTON)))
-    driver.find_element(By.XPATH, consts.CONSTRUCTOR_ACCOUNT_LOGIN_BUTTON).click()
+    WebDriverWait(driver, 3).until(expected_conditions.element_to_be_clickable((By.XPATH, consts.CONSTRUCTOR_LOGIN_BUTTON)))
+    driver.find_element(By.XPATH, consts.CONSTRUCTOR_LOGIN_BUTTON).click()
 
     WebDriverWait(driver, 3).until(expected_conditions.element_to_be_clickable((By.XPATH, consts.LOGIN_REGISTRATION_BUTTON)))
     driver.find_element(By.XPATH, consts.LOGIN_REGISTRATION_BUTTON).click()
 
-    WebDriverWait(driver, 3).until(expected_conditions.element_to_be_clickable((By.XPATH, consts.LOGIN_BUTTON)))
-    driver.find_element(By.XPATH, consts.LOGIN_BUTTON).click()
+    WebDriverWait(driver, 3).until(expected_conditions.element_to_be_clickable((By.XPATH, consts.RECOVERY_PASSWORD_LOGIN_BUTTON)))
+    driver.find_element(By.XPATH, consts.RECOVERY_PASSWORD_LOGIN_BUTTON).click()
 
     WebDriverWait(driver, 3).until(expected_conditions.element_to_be_clickable((By.XPATH, consts.LOGIN_ENTER_BUTTON)))
     driver.find_element(By.XPATH, consts.LOGIN_ENTER_BUTTON).click()
